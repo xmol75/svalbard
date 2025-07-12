@@ -4,38 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Viaje a Svalbard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
     <header>
         <h1>Viaje a Svalbard</h1>
         <nav>
-            <a href="#calendario">Calendario</a>
-            <a href="#actividades">Actividades</a>
-            <a href="#hoteles">Hoteles</a>
-            <a href="#vuelos">Vuelos</a>
-            <a href="#info">Información</a>
-            <a href="#meteo">Previsión Meteorológica</a>
-            <a href="#fotos">Galería</a>
+            <ul>
+                <li><a href="#calendario">Calendario</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+                <li><a href="#hoteles">Hoteles</a></li>
+                <li><a href="#vuelos">Vuelos</a></li>
+                <li><a href="#info">Información</a></li>
+                <li><a href="#fotos">Fotos</a></li>
+                <li><a href="#meteo">Previsión</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+            </ul>
         </nav>
     </header>
-
     <main>
-        <section id="calendario"><h2>Calendario</h2><div id="calendario-content"></div></section>
-        <section id="actividades"><h2>Actividades</h2><div id="actividades-content"></div></section>
-        <section id="hoteles"><h2>Hoteles</h2><div id="hoteles-content"></div></section>
-        <section id="vuelos"><h2>Vuelos</h2><div id="vuelos-content"></div></section>
-        <section id="info"><h2>Información general</h2><div id="info-content"></div></section>
-        <section id="meteo"><h2>Previsión meteorológica</h2><div id="meteo-content"></div></section>
-        <section id="fotos"><h2>Galería</h2><div id="galeria-content"></div></section>
+        <section id="calendario">
+            <h2>Calendario del viaje</h2>
+            <p>El calendario personalizado por grupos se muestra aquí (pendiente de integrar dinámicamente).</p>
+        </section>
+        <section id="actividades">
+            <h2>Actividades</h2>
+            <p>Incluye ATV Safari, Excursión Costera, Safari de Morsas, etc.</p>
+        </section>
+        <section id="hoteles">
+            <h2>Hoteles</h2>
+            <p>Hotel Funken Lodge y Radisson Blu Airport Hotel.</p>
+        </section>
+        <section id="vuelos">
+            <h2>Vuelos</h2>
+            <p>Trayectos incluidos entre Madrid, Oslo y Longyearbyen.</p>
+        </section>
+        <section id="info">
+            <h2>Información general</h2>
+            <p>Documentación necesaria, moneda, enchufes, etc.</p>
+        </section>
+        <section id="fotos">
+            <h2>Galería de fotos</h2>
+            <img src="assets/images/ATV_Safari_1.jpg" alt="ATV Safari" />
+        </section>
+        <section id="meteo">
+            <h2>Previsión meteorológica</h2>
+            <p>Temperaturas estimadas en Oslo y Longyearbyen, horas de luz, etc.</p>
+        </section>
+        <section id="mapa">
+            <h2>Mapa Interactivo</h2>
+            <div id="map" style="height: 400px;"></div>
+            <script>
+                var map = L.map('map').setView([78.2232, 15.6469], 10);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+                L.marker([78.2232, 15.6469]).addTo(map)
+                    .bindPopup('Longyearbyen')
+                    .openPopup();
+            </script>
+        </section>
     </main>
-
-    <script src="datos/calendario.js"></script>
-    <script src="datos/actividades.js"></script>
-    <script src="datos/vuelos.js"></script>
-    <script src="datos/hoteles.js"></script>
-    <script src="datos/info.js"></script>
-    <script src="datos/meteo.js"></script>
-    <script src="script.js"></script>
+    <footer>
+        <p>© 2025 Grupo de Viaje a Svalbard</p>
+    </footer>
 </body>
 </html>
