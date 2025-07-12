@@ -1,0 +1,1 @@
+const calendario = ['Día 1: llegada', 'Día 2: excursión grupo A'];

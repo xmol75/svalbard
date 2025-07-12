@@ -1,0 +1,1 @@
+const hoteles = ['Hotel Oslo City', 'Radisson Blu Svalbard'];

@@ -1,0 +1,1 @@
+const vuelos = ['Vuelo Madrid - Oslo', 'Vuelo Oslo - Longyearbyen'];

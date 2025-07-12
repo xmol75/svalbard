@@ -1,0 +1,1 @@
+const meteo = ['Oslo: 12°C', 'Svalbard: -5°C'];

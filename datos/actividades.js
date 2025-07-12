@@ -1,0 +1,1 @@
+const actividades = ['Visita museo', 'Safari en moto de nieve'];

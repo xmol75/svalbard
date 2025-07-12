@@ -1,0 +1,1 @@
+const info = ['Moneda: corona noruega', 'Documentación: pasaporte'];
