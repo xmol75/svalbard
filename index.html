@@ -34,6 +34,9 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .text-shadow-lg {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
     </style>
 </head>
 <body class="text-slate-800">
@@ -47,16 +50,22 @@
                 <img src="https://placehold.co/1600x600/0b3954/e0f7fa?text=Svalbard+2025" 
                      alt="Paisaje ártico de Svalbard" 
                      class="w-full h-80 sm:h-96 object-cover">
+                <!-- Contenedor del Título y Cuenta atrás -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col items-center justify-center p-8 text-center">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-shadow-lg">
-                        Viaje a Svalbard 2025
-                    </h1>
-                    <!-- Cuenta Atrás -->
-                    <div id="countdown" class="mt-6 grid grid-cols-4 gap-2 sm:gap-4 text-white">
-                        <div class="countdown-box p-3 rounded-lg"><div id="days" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Días</div></div>
-                        <div class="countdown-box p-3 rounded-lg"><div id="hours" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Horas</div></div>
-                        <div class="countdown-box p-3 rounded-lg"><div id="minutes" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Minutos</div></div>
-                        <div class="countdown-box p-3 rounded-lg"><div id="seconds" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Segundos</div></div>
+                    <!-- Apartado para el título -->
+                    <div>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-shadow-lg">
+                            Viaje a Svalbard 2025
+                        </h1>
+                    </div>
+                    <!-- Apartado para la cuenta atrás -->
+                    <div class="mt-6">
+                        <div id="countdown" class="grid grid-cols-4 gap-2 sm:gap-4 text-white">
+                            <div class="countdown-box p-3 rounded-lg"><div id="days" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Días</div></div>
+                            <div class="countdown-box p-3 rounded-lg"><div id="hours" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Horas</div></div>
+                            <div class="countdown-box p-3 rounded-lg"><div id="minutes" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Minutos</div></div>
+                            <div class="countdown-box p-3 rounded-lg"><div id="seconds" class="text-2xl sm:text-4xl font-bold">00</div><div class="text-xs sm:text-sm">Segundos</div></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,7 +120,7 @@
 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-2xl font-bold'>¡YA ESTAMOS DE VIAJE!</div>";
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-2xl font-bold text-white'>¡YA ESTAMOS DE VIAJE!</div>";
             }
         }, 1000);
     </script>
