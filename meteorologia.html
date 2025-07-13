@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteorología - Viaje a Svalbard 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff; /* Un azul cielo muy pálido */
+        }
+        .weather-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .weather-icon {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto 1rem;
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: #475569; /* slate-600 */
+            text-align: left;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0; /* slate-200 */
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
+
+        <!-- Cabecera y botón de volver -->
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold text-slate-700">Previsión Meteorológica</h1>
+            <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                &larr; Volver al Inicio
+            </a>
+        </header>
+
+        <!-- Sección Oslo -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-600 mb-2">Oslo: Clima de Verano Suave</h2>
+            <p class="text-slate-500 mb-6">Temperaturas agradables con posibilidad de lluvias. Días largos y luminosos.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Sábado 19 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold text-lg">Sábado 19</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-2.svg" alt="Parcialmente nublado" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">13º / 22º</p>
+                        <p class="text-sm text-slate-500">Parcialmente nublado</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 12º/21º</span>
+                        <span>💧 ~75%</span>
+                        <span>💨 10km/h</span>
+                        <span>☀️ 04:30-22:30</span>
+                    </div>
+                </div>
+                <!-- Domingo 20 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold text-lg">Domingo 20</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/day.svg" alt="Soleado" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">14º / 23º</p>
+                        <p class="text-sm text-slate-500">Soleado</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 14º/23º</span>
+                        <span>💧 ~70%</span>
+                        <span>💨 5-10km/h</span>
+                        <span>☀️ 04:32-22:28</span>
+                    </div>
+                </div>
+                <!-- Sábado 26 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold text-lg">Sábado 26</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-5.svg" alt="Lluvia ligera" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">12º / 21º</p>
+                        <p class="text-sm text-slate-500">Posibles lluvias</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 11º/20º</span>
+                        <span>💧 ~80%</span>
+                        <span>💨 15km/h</span>
+                        <span>☀️ 04:45-22:15</span>
+                    </div>
+                </div>
+                 <!-- Domingo 27 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold text-lg">Domingo 27</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-3.svg" alt="Mayormente nublado" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">13º / 22º</p>
+                        <p class="text-sm text-slate-500">Mayormente nublado</p>
+                    </div>
+                     <div class="details-grid">
+                        <span>🌡️ 12º/21º</span>
+                        <span>💧 ~78%</span>
+                        <span>💨 10-15km/h</span>
+                        <span>☀️ 04:47-22:12</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Longyearbyen -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-600 mb-2">Longyearbyen: El Verano Ártico</h2>
+            <p class="text-slate-500 mb-6">Clima fresco y variable. El sol no se pone en todo el día ("Sol de Medianoche"). Imprescindible vestir por capas.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Lunes 21 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold">Lunes 21</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy.svg" alt="Nublado" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">3º / 7º</p>
+                        <p class="text-sm text-slate-500">Nublado</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 0º/5º</span>
+                        <span>💧 ~85%</span>
+                        <span>💨 20km/h</span>
+                        <span>☀️ 24 horas</span>
+                    </div>
+                </div>
+                <!-- Martes 22 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold">Martes 22</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-1.svg" alt="Sol y nubes" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">4º / 8º</p>
+                        <p class="text-sm text-slate-500">Sol y nubes</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 1º/6º</span>
+                        <span>💧 ~80%</span>
+                        <span>💨 15km/h</span>
+                        <span>☀️ 24 horas</span>
+                    </div>
+                </div>
+                <!-- Miércoles 23 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold">Miércoles 23</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-4.svg" alt="Llovizna" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">3º / 6º</p>
+                        <p class="text-sm text-slate-500">Llovizna</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 0º/4º</span>
+                        <span>💧 ~90%</span>
+                        <span>💨 25km/h</span>
+                        <span>☀️ 24 horas</span>
+                    </div>
+                </div>
+                <!-- Jueves 24 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold">Jueves 24</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/day.svg" alt="Soleado" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">4º / 9º</p>
+                        <p class="text-sm text-slate-500">Soleado</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 2º/7º</span>
+                        <span>💧 ~75%</span>
+                        <span>💨 10km/h</span>
+                        <span>☀️ 24 horas</span>
+                    </div>
+                </div>
+                <!-- Viernes 25 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold">Viernes 25</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-2.svg" alt="Parcialmente nublado" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">3º / 8º</p>
+                        <p class="text-sm text-slate-500">Parcialmente nublado</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ 1º/6º</span>
+                        <span>💧 ~82%</span>
+                        <span>💨 15km/h</span>
+                        <span>☀️ 24 horas</span>
+                    </div>
+                </div>
+                 <!-- Sábado 26 -->
+                <div class="weather-card">
+                    <div>
+                        <h4 class="font-bold">Sábado 26</h4>
+                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/windy.svg" alt="Viento" class="weather-icon">
+                        <p class="text-2xl font-bold text-slate-800">2º / 6º</p>
+                        <p class="text-sm text-slate-500">Fresco y ventoso</p>
+                    </div>
+                    <div class="details-grid">
+                        <span>🌡️ -1º/4º</span>
+                        <span>💧 ~85%</span>
+                        <span>💨 30km/h</span>
+                        <span>☀️ 24 horas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nota sobre la previsión -->
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <h3 class="text-lg font-semibold mb-2 text-slate-700">Nota Importante</h3>
+            <p class="text-slate-600">Esta previsión se basa en datos históricos y promedios para el mes de julio. El tiempo en el Ártico puede ser muy cambiante. ¡Prepara siempre ropa para abrigarte y protegerte de la lluvia y el viento!</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
