@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje a Svalbard 2025</title>
+    <!-- Incluimos Tailwind CSS para un diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluimos la fuente Inter de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Usamos la fuente Inter como fuente principal */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Un gris muy claro, casi blanco */
+        }
+        /* Efecto de "levantamiento" y sombra sutil en las tarjetas de navegación */
+        .nav-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* Animación de aparición para el contenido */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
+
+        <!-- Cabecera con imagen evocadora de Svalbard -->
+        <header class="mb-10 rounded-xl overflow-hidden shadow-2xl fade-in">
+            <div class="relative">
+                <!-- Usamos una imagen que sugiere un paisaje ártico -->
+                <img src="https://placehold.co/1600x600/0b3954/e0f7fa?text=Svalbard+2025" 
+                     alt="Paisaje ártico de Svalbard" 
+                     class="w-full h-64 sm:h-80 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex flex-col items-center justify-end p-8">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center shadow-xl">
+                        Viaje a Svalbard 2025
+                    </h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Menú de Navegación a los Apartados -->
+        <main class="fade-in" style="animation-delay: 0.2s;">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-700">Explora Nuestra Aventura</h2>
+            
+            <!-- Grid para las tarjetas de navegación, más adaptable -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Tarjeta 1: Calendario -->
+                <a href="calendario.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-sky-100 text-sky-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Calendario</h3>
+                    <p class="text-slate-500 text-sm">Fechas clave y planificación general.</p>
+                </a>
+
+                <!-- Tarjeta 2: Actividades -->
+                <a href="actividades.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-teal-100 text-teal-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/><path d="M12 11.5 8.5 15l7-7-7 7z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Actividades</h3>
+                    <p class="text-slate-500 text-sm">Excursiones y aventuras programadas.</p>
+                </a>
+
+                <!-- Tarjeta 3: Vuelos -->
+                <a href="vuelos.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-indigo-100 text-indigo-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1.5-1.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Vuelos</h3>
+                    <p class="text-slate-500 text-sm">Detalles de nuestros billetes de avión.</p>
+                </a>
+
+                <!-- Tarjeta 4: Hoteles -->
+                <a href="hoteles.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-amber-100 text-amber-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M10 3v18"/><path d="M12 3v18"/><path d="M4 11V3"/><path d="M20 11V3"/><path d="M4 21h16"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Hoteles</h3>
+                    <p class="text-slate-500 text-sm">Nuestros alojamientos en el ártico.</p>
+                </a>
+                
+                <!-- Tarjeta 5: Información General -->
+                <a href="informacion.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-blue-100 text-blue-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Información General</h3>
+                    <p class="text-slate-500 text-sm">Datos útiles y consejos sobre el destino.</p>
+                </a>
+                
+                <!-- Tarjeta 6: Meteorología -->
+                <a href="meteorologia.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-cyan-100 text-cyan-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 22h.5a2.5 2.5 0 0 0 0-5h-.5a2.5 2.5 0 0 1 0-5h.5a2.5 2.5 0 0 0 0-5h-.5a2.5 2.5 0 0 0-2.34-2.16"/><path d="M6.5 2h-.5a2.5 2.5 0 0 0 0 5h.5a2.5 2.5 0 0 1 0 5h-.5a2.5 2.5 0 0 0 0 5h.5a2.5 2.5 0 0 0 2.34 2.16"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Meteorología</h3>
+                    <p class="text-slate-500 text-sm">El tiempo que nos espera en el viaje.</p>
+                </a>
+                
+                <!-- Tarjeta 7: Mapa Interactivo -->
+                <a href="mapa.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-lime-100 text-lime-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Mapa Interactivo</h3>
+                    <p class="text-slate-500 text-sm">Puntos de interés y rutas en el mapa.</p>
+                </a>
+
+                <!-- Tarjeta 8: Galería de Fotos -->
+                <a href="galeria.html" class="nav-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <div class="bg-rose-100 text-rose-600 rounded-full p-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Galería de Fotos</h3>
+                    <p class="text-slate-500 text-sm">Los mejores recuerdos de la aventura.</p>
+                </a>
+
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="text-center mt-16 text-slate-500 text-sm fade-in" style="animation-delay: 0.4s;">
+            <p>&copy; 2025 - Viajes y desarrollo web por Xmol</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
