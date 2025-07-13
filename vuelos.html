@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuelos - Viaje a Svalbard 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Un azul grisáceo muy claro */
+        }
+        .flight-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+        }
+        .flight-path {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 0;
+            padding: 1rem 0;
+        }
+        .flight-path .airport-code {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #1e3a8a; /* Azul oscuro */
+        }
+        .flight-path .line {
+            flex-grow: 1;
+            height: 2px;
+            /* Línea de puntos para representar el trayecto */
+            background-image: linear-gradient(to right, #a5b4fc 40%, transparent 0%);
+            background-position: bottom;
+            background-size: 10px 2px;
+            background-repeat: repeat-x;
+        }
+        .flight-path .plane-icon {
+            color: #3b82f6; /* Azul brillante */
+            margin: 0 1rem; /* Espacio alrededor del avión */
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+
+        <!-- Cabecera y botón de volver -->
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-4xl font-bold text-slate-700">Itinerario de Vuelos</h1>
+            <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                &larr; Volver al Inicio
+            </a>
+        </header>
+
+        <!-- Sección de Vuelos -->
+        <main class="space-y-12">
+
+            <!-- VUELOS DE IDA -->
+            <div>
+                <h2 class="text-3xl font-bold text-slate-600 mb-6 border-b-2 border-sky-200 pb-2">Vuelos de Ida</h2>
+                <div class="space-y-6">
+                    <!-- Tarjeta Vuelo 1: PMI -> OSL -->
+                    <div class="flight-card">
+                        <div class="flex justify-between items-center">
+                            <div class="font-bold text-slate-500">TRAMO 1</div>
+                            <div class="text-sm font-semibold text-white bg-blue-500 px-3 py-1 rounded-full">SAS</div>
+                        </div>
+                        <div class="flight-path">
+                            <div class="text-center">
+                                <span class="airport-code">PMI</span>
+                                <span class="block text-sm text-slate-600">Palma de Mallorca</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Palma</span>
+                            </div>
+                            <div class="line"></div>
+                            <svg class="w-8 h-8 plane-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.432 11.111l-8.521-6.691a.923.923 0 0 0-1.114.032L3.21 11.111a.923.923 0 0 0-.21 1.035l1.826 4.174a.923.923 0 0 0 .866.58h2.308l-2.18 3.54a.923.923 0 0 0 .794 1.45h11.362a.923.923 0 0 0 .794-1.45l-2.18-3.54h2.308a.923.923 0 0 0 .866-.58l1.826-4.174a.923.923 0 0 0-.21-1.035z"/></svg>
+                            <div class="line"></div>
+                            <div class="text-center">
+                                <span class="airport-code">OSL</span>
+                                <span class="block text-sm text-slate-600">Oslo</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Gardermoen</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-slate-600 pt-2 border-t mt-2">
+                            <div><span class="font-semibold block text-sm text-slate-400">Fecha</span>19/07/2025</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Salida - Llegada</span>14:10h - 17:50h</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Vuelo</span>SK4692</div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Vuelo 2: OSL -> LYR -->
+                    <div class="flight-card">
+                        <div class="flex justify-between items-center">
+                            <div class="font-bold text-slate-500">TRAMO 2</div>
+                            <div class="text-sm font-semibold text-white bg-blue-500 px-3 py-1 rounded-full">SAS</div>
+                        </div>
+                        <div class="flight-path">
+                            <div class="text-center">
+                                <span class="airport-code">OSL</span>
+                                <span class="block text-sm text-slate-600">Oslo</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Gardermoen</span>
+                            </div>
+                             <div class="line"></div>
+                            <svg class="w-8 h-8 plane-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.432 11.111l-8.521-6.691a.923.923 0 0 0-1.114.032L3.21 11.111a.923.923 0 0 0-.21 1.035l1.826 4.174a.923.923 0 0 0 .866.58h2.308l-2.18 3.54a.923.923 0 0 0 .794 1.45h11.362a.923.923 0 0 0 .794-1.45l-2.18-3.54h2.308a.923.923 0 0 0 .866-.58l1.826-4.174a.923.923 0 0 0-.21-1.035z"/></svg>
+                            <div class="line"></div>
+                            <div class="text-center">
+                                <span class="airport-code">LYR</span>
+                                <span class="block text-sm text-slate-600">Longyearbyen</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Svalbard</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-slate-600 pt-2 border-t mt-2">
+                            <div><span class="font-semibold block text-sm text-slate-400">Fecha</span>20/07/2025</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Salida - Llegada</span>09:50h - 12:45h</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Vuelo</span>SK4492</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VUELOS DE VUELTA -->
+            <div>
+                <h2 class="text-3xl font-bold text-slate-600 mb-6 border-b-2 border-rose-200 pb-2">Vuelos de Vuelta</h2>
+                <div class="space-y-6">
+                    <!-- Tarjeta Vuelo 3: LYR -> OSL -->
+                    <div class="flight-card">
+                        <div class="flex justify-between items-center">
+                            <div class="font-bold text-slate-500">TRAMO 1</div>
+                            <div class="text-sm font-semibold text-white bg-blue-500 px-3 py-1 rounded-full">SAS</div>
+                        </div>
+                        <div class="flight-path">
+                            <div class="text-center">
+                                <span class="airport-code">LYR</span>
+                                <span class="block text-sm text-slate-600">Longyearbyen</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Svalbard</span>
+                            </div>
+                            <div class="line"></div>
+                             <svg class="w-8 h-8 plane-icon transform -scale-x-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.432 11.111l-8.521-6.691a.923.923 0 0 0-1.114.032L3.21 11.111a.923.923 0 0 0-.21 1.035l1.826 4.174a.923.923 0 0 0 .866.58h2.308l-2.18 3.54a.923.923 0 0 0 .794 1.45h11.362a.923.923 0 0 0 .794-1.45l-2.18-3.54h2.308a.923.923 0 0 0 .866-.58l1.826-4.174a.923.923 0 0 0-.21-1.035z"/></svg>
+                            <div class="line"></div>
+                            <div class="text-center">
+                                <span class="airport-code">OSL</span>
+                                <span class="block text-sm text-slate-600">Oslo</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Gardermoen</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-slate-600 pt-2 border-t mt-2">
+                            <div><span class="font-semibold block text-sm text-slate-400">Fecha</span>26/07/2025</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Salida - Llegada</span>12:15h - 15:10h</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Vuelo</span>SK4491</div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Vuelo 4: OSL -> PMI -->
+                    <div class="flight-card">
+                        <div class="flex justify-between items-center">
+                             <div class="font-bold text-slate-500">TRAMO 2</div>
+                             <div class="text-sm font-semibold text-white bg-red-500 px-3 py-1 rounded-full">Norwegian</div>
+                        </div>
+                        <div class="flight-path">
+                            <div class="text-center">
+                                <span class="airport-code">OSL</span>
+                                <span class="block text-sm text-slate-600">Oslo</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Gardermoen</span>
+                            </div>
+                            <div class="line"></div>
+                            <svg class="w-8 h-8 plane-icon transform -scale-x-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.432 11.111l-8.521-6.691a.923.923 0 0 0-1.114.032L3.21 11.111a.923.923 0 0 0-.21 1.035l1.826 4.174a.923.923 0 0 0 .866.58h2.308l-2.18 3.54a.923.923 0 0 0 .794 1.45h11.362a.923.923 0 0 0 .794-1.45l-2.18-3.54h2.308a.923.923 0 0 0 .866-.58l1.826-4.174a.923.923 0 0 0-.21-1.035z"/></svg>
+                            <div class="line"></div>
+                            <div class="text-center">
+                                <span class="airport-code">PMI</span>
+                                <span class="block text-sm text-slate-600">Palma de Mallorca</span>
+                                <span class="block text-xs text-slate-400">Aeropuerto de Palma</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-slate-600 pt-2 border-t mt-2">
+                            <div><span class="font-semibold block text-sm text-slate-400">Fecha</span>27/07/2025</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Salida - Llegada</span>11:35h - 15:05h</div>
+                            <div><span class="font-semibold block text-sm text-slate-400">Vuelo</span>D8 5621</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
