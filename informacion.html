@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información General - Viaje a Svalbard 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .info-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding-top 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+        }
+        .info-accordion-button.open + .info-accordion-content {
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        .info-accordion-button svg.arrow {
+            transition: transform 0.3s ease;
+        }
+        .info-accordion-button.open svg.arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Cabecera y botón de volver -->
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold text-slate-700">Información General</h1>
+            <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                &larr; Volver al Inicio
+            </a>
+        </header>
+
+        <!-- Datos Clave -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-600 mb-6">Datos Clave del Destino</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Huso Horario -->
+                <div class="bg-white p-5 rounded-xl shadow-md flex items-center">
+                    <svg class="w-10 h-10 mr-4 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div>
+                        <h4 class="font-bold">Huso Horario</h4>
+                        <p class="text-slate-600 text-sm">Misma hora que en España (CET, UTC+2 en verano).</p>
+                    </div>
+                </div>
+                <!-- Moneda -->
+                <div class="bg-white p-5 rounded-xl shadow-md flex items-center">
+                    <svg class="w-10 h-10 mr-4 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <div>
+                        <h4 class="font-bold">Moneda</h4>
+                        <p class="text-slate-600 text-sm">Corona Noruega (NOK).</p>
+                    </div>
+                </div>
+                <!-- Info Svalbard (Desplegable) -->
+                <div class="bg-white p-5 rounded-xl shadow-md">
+                    <button class="info-accordion-button w-full flex justify-between items-center">
+                        <div class="flex items-center">
+                            <svg class="w-10 h-10 mr-4 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.884 5.064A9 9 0 1016.116 5.064M12 20.944V17.95" /></svg>
+                            <div>
+                                <h4 class="font-bold text-left">Sobre Svalbard</h4>
+                                <p class="text-slate-600 text-sm text-left">Archipiélago ártico único. Toca para saber más.</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 arrow flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="info-accordion-content border-t border-slate-200 text-sm text-slate-600">
+                        <ul class="space-y-2 list-disc list-inside mt-4">
+                            <li><strong>Dominio de los Osos:</strong> Hay más osos polares (unos 3.000) que personas (unos 2.500). Es obligatorio ir con un guía armado fuera del asentamiento.</li>
+                            <li><strong>Bóveda Global de Semillas:</strong> Alberga una copia de seguridad de las semillas de todo el mundo, protegiendo la diversidad de cultivos ante catástrofes.</li>
+                            <li><strong>Tratado de Svalbard:</strong> Un tratado de 1920 otorga a Noruega la soberanía, pero permite a los ciudadanos de los países firmantes (incluida España) residir y trabajar allí.</li>
+                            <li><strong>Sol de Medianoche:</strong> Desde finales de abril hasta finales de agosto, el sol nunca se pone.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <!-- Info Oslo (Desplegable) -->
+                <div class="bg-white p-5 rounded-xl shadow-md">
+                     <button class="info-accordion-button w-full flex justify-between items-center">
+                        <div class="flex items-center">
+                           <svg class="w-10 h-10 mr-4 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                            <div>
+                                <h4 class="font-bold text-left">Sobre Oslo</h4>
+                                <p class="text-slate-600 text-sm text-left">La capital verde de Noruega. Toca para saber más.</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 arrow flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                     <div class="info-accordion-content border-t border-slate-200 text-sm text-slate-600">
+                        <ul class="space-y-2 list-disc list-inside mt-4">
+                            <li><strong>Capital Verde:</strong> Rodeada por el "Marka", un inmenso bosque protegido, y situada al final del fiordo de Oslo.</li>
+                            <li><strong>Tigre de Bronce:</strong> Una famosa estatua de un tigre de 4.5 metros te da la bienvenida frente a la Estación Central.</li>
+                            <li><strong>Museos Vikingos:</strong> La ciudad alberga impresionantes museos con barcos vikingos increíblemente conservados.</li>
+                            <li><strong>Ópera de Oslo:</strong> Un icónico edificio de mármol y cristal que parece emerger del agua, y por cuyo tejado se puede caminar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Incluido / No Incluido -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Incluido -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-green-700">Incluido en el Viaje</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Traslados desde/hacia el alojamiento y el aeropuerto en Longyearbyen.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Todas las actividades del programa.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Alojamiento con desayuno.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Un almuerzo de expedición sencillo.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Bebidas calientes y galletas en las excursiones.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Guía con todo el equipo de seguridad necesario.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Seguro de búsqueda y rescate.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Préstamo de mono térmico, chaleco salvavidas y gafas (si se requiere).</span></li>
+                    </ul>
+                </div>
+                <!-- No Incluido -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-red-700">No Incluido en el Viaje</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg><span>Vuelos internacionales y nacionales.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg><span>Seguro de viaje personal.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg><span>Manejo de equipaje.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tiempo Libre y Consejos -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-slate-700">Tiempo Libre</h3>
+                <p class="text-slate-600">Durante tu tiempo libre, puedes explorar el pueblo. Por ejemplo: visitar el <strong>Museo de Svalbard</strong>, ir de compras o cenar en alguno de los excelentes restaurantes que ofrece la zona, como <strong>Kroa, Huset, Stationen, Funken Restaurant</strong>, entre otros.</p>
+            </div>
+             <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-slate-700">Consejos y Curiosidades</h3>
+                <ul class="space-y-2 text-slate-600">
+                    <li class="flex items-start"><strong class="mr-2 text-sky-600">&#10148;</strong><span><strong>Sol de Medianoche:</strong> En julio, el sol no se pone en Svalbard. ¡Disfrutaréis de 24 horas de luz al día!</span></li>
+                     <li class="flex items-start"><strong class="mr-2 text-sky-600">&#10148;</strong><span><strong>Ropa:</strong> Es fundamental vestir por capas. Aunque sea verano, las temperaturas pueden ser frías, especialmente en las excursiones en barco o glaciares.</span></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    
+    <script>
+        document.querySelectorAll('.info-accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+                button.classList.toggle('open');
+
+                if (button.classList.contains('open')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
