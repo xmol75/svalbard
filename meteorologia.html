@@ -206,7 +206,11 @@
                 <div class="weather-card">
                     <div>
                         <h4 class="font-bold">Sábado 26</h4>
-                        <img src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/windy.svg" alt="Viento" class="weather-icon">
+                        <!-- ICONO CORREGIDO: SVG integrado para asegurar la carga -->
+                        <svg class="weather-icon text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <title>Viento</title>
+                            <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
+                        </svg>
                         <p class="text-2xl font-bold text-slate-800">2º / 6º</p>
                         <p class="text-sm text-slate-500">Fresco y ventoso</p>
                     </div>
