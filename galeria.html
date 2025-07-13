@@ -20,7 +20,7 @@
             border-radius: 0.75rem;
         }
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
         .gallery-item img {
@@ -37,16 +37,18 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.85);
             display: none;
             justify-content: center;
             align-items: center;
             padding: 2rem;
+            animation: fadeIn 0.3s;
         }
         #lightbox img {
             max-width: 90%;
             max-height: 85%;
             border-radius: 0.5rem;
+            animation: zoomIn 0.3s;
         }
         #lightbox.active {
             display: flex;
@@ -60,6 +62,8 @@
             cursor: pointer;
             line-height: 1;
         }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes zoomIn { from { transform: scale(0.8); } to { transform: scale(1); } }
     </style>
 </head>
 <body class="text-slate-800">
@@ -69,57 +73,97 @@
 
         <!-- Cabecera y botón de volver -->
         <header class="flex justify-between items-center mb-10">
-            <h1 class="text-3xl font-bold text-slate-700">Galería de Fotos</h1>
+            <h1 class="text-3xl font-bold text-slate-700">Galería de Recuerdos</h1>
             <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
                 &larr; Volver al Inicio
             </a>
         </header>
 
-        <!-- Grid de la galería -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Secciones de la galería por actividad -->
+        <div class="space-y-12">
             
-            <!-- Foto 1 -->
-            <div class="gallery-item">
-                <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/0b3954/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 1" class="w-full h-full object-cover">
-            </div>
-            <!-- Foto 2 -->
-            <div class="gallery-item">
-                 <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/3498db/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 2" class="w-full h-full object-cover">
-            </div>
-            <!-- Foto 3 -->
-            <div class="gallery-item">
-                 <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/9b59b6/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 3" class="w-full h-full object-cover">
-            </div>
-            <!-- Foto 4 -->
-            <div class="gallery-item">
-                 <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/e74c3c/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 4" class="w-full h-full object-cover">
-            </div>
-            <!-- Foto 5 -->
-            <div class="gallery-item">
-                 <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/2ecc71/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 5" class="w-full h-full object-cover">
-            </div>
-             <!-- Foto 6 -->
-            <div class="gallery-item">
-                 <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/f1c40f/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 6" class="w-full h-full object-cover">
-            </div>
-             <!-- Foto 7 -->
-            <div class="gallery-item">
-                 <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/1abc9c/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 7" class="w-full h-full object-cover">
-            </div>
-             <!-- Foto 8 -->
-            <div class="gallery-item">
-                 <!-- CAMBIA ESTA URL POR LA DE TU FOTO -->
-                <img src="https://placehold.co/400x400/34495e/ffffff?text=Tu+Foto+Aquí" alt="Descripción de la foto 8" class="w-full h-full object-cover">
-            </div>
+            <!-- Sección ATV Safari -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">ATV Safari</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/ATV%20Safari%201.jpg" alt="Foto de ATV Safari 1" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/ATV%20Safari%202.jpeg" alt="Foto de ATV Safari 2" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
+
+            <!-- Sección Captain's Favourite Coastal Boat Trip -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">Captain's Favourite Coastal Boat Trip</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Captains%20Favourite%20Coastal%20Boat%20Trip%201.jpeg" alt="Foto de Captain's Trip 1" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Captains%20Favourite%20Coastal%20Boat%20Trip%202.jpeg" alt="Foto de Captain's Trip 2" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Captains%20Favourite%20Coastal%20Boat%20Trip%203.jpeg" alt="Foto de Captain's Trip 3" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Captains%20Favourite%20Coastal%20Boat%20Trip%204.jpeg" alt="Foto de Captain's Trip 4" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Captains%20Favourite%20Coastal%20Boat%20Trip%205.jpeg" alt="Foto de Captain's Trip 5" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
+
+            <!-- Sección Dog Cart by the Sea -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">Dog Cart by the Sea</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Dog%20Cart%20by%20the%20Sea%201.jpeg" alt="Foto de Dog Cart 1" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Dog%20Cart%20by%20the%20Sea%202.jpeg" alt="Foto de Dog Cart 2" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
+
+            <!-- Sección Hike to Sarkofagen -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">Hike to Sarkofagen</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Hike%20to%20Sarkofagen%201.jpeg" alt="Foto de Hike to Sarkofagen 1" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Hike%20to%20Sarkofagen%202.jpeg" alt="Foto de Hike to Sarkofagen 2" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Hike%20to%20Sarkofagen%203.jpeg" alt="Foto de Hike to Sarkofagen 3" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
             
-            <!-- Puedes añadir más fotos simplemente copiando y pegando uno de los bloques de arriba -->
+            <!-- Sección Walrus Safari -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">Walrus Safari to Borebukta</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                     <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Walrus%20Safari%20to%20Borebukta%20onboard%20Kvitbj%C3%B8rn%201.jpeg" alt="Foto de Walrus Safari 1" class="w-full h-full object-cover"></div>
+                     <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Walrus%20Safari%20to%20Borebukta%20onboard%20Kvitbj%C3%B8rn%202.jpeg" alt="Foto de Walrus Safari 2" class="w-full h-full object-cover"></div>
+                     <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Walrus%20Safari%20to%20Borebukta%20onboard%20Kvitbj%C3%B8rn%203.jpeg" alt="Foto de Walrus Safari 3" class="w-full h-full object-cover"></div>
+                     <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Walrus%20Safari%20to%20Borebukta%20onboard%20Kvitbj%C3%B8rn%204.jpeg" alt="Foto de Walrus Safari 4" class="w-full h-full object-cover"></div>
+                     <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Walrus%20Safari%20to%20Borebukta%20onboard%20Kvitbj%C3%B8rn%205.jpeg" alt="Foto de Walrus Safari 5" class="w-full h-full object-cover"></div>
+                     <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Walrus%20Safari%20to%20Borebukta%20onboard%20Kvitbj%C3%B8rn%206.jpeg" alt="Foto de Walrus Safari 6" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
+            
+            <!-- Sección Wilderness Evening -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">Wilderness Evening</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wilderness%20Evening%201.jpeg" alt="Foto de Wilderness Evening 1" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wilderness%20Evening%202.jpeg" alt="Foto de Wilderness Evening 2" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wilderness%20Evening%203.jpeg" alt="Foto de Wilderness Evening 3" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
+
+            <!-- Sección Wildlife Photography Tour -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">Wildlife Photography Tour</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wildlife%20Photography%20Tour%20around%20Longyearbyen%201.jpeg" alt="Foto de Wildlife Photography Tour 1" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wildlife%20Photography%20Tour%20around%20Longyearbyen%202.jpeg" alt="Foto de Wildlife Photography Tour 2" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wildlife%20Photography%20Tour%20around%20Longyearbyen%203.jpeg" alt="Foto de Wildlife Photography Tour 3" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
+
+            <!-- Sección Wildlife and Glacier Cruise -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-600 mb-6 border-b pb-2">Wildlife and Glacier Cruise</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wildlife%20and%20Glacier%20Cruise%20onboard%20MS%20Bard%201.jpeg" alt="Foto de Glacier Cruise 1" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wildlife%20and%20Glacier%20Cruise%20onboard%20MS%20Bard%202.jpeg" alt="Foto de Glacier Cruise 2" class="w-full h-full object-cover"></div>
+                    <div class="gallery-item"><img src="https://raw.githubusercontent.com/xmol75/svalbard/main/fotos/Wildlife%20and%20Glacier%20Cruise%20onboard%20MS%20Bard%203.jpeg" alt="Foto de Glacier Cruise 3" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
 
         </div>
     </div>
@@ -150,7 +194,6 @@
 
         closeButton.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', (e) => {
-            // Se cierra solo si se hace clic en el fondo, no en la imagen
             if (e.target === lightbox) {
                 closeLightbox();
             }
