@@ -55,12 +55,24 @@
                         <p class="text-slate-600 text-sm">Misma hora que en España (CET, UTC+2 en verano).</p>
                     </div>
                 </div>
-                <!-- Moneda -->
-                <div class="bg-white p-5 rounded-xl shadow-md flex items-center">
-                    <svg class="w-10 h-10 mr-4 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    <div>
-                        <h4 class="font-bold">Moneda</h4>
-                        <p class="text-slate-600 text-sm">Corona Noruega (NOK).</p>
+                <!-- Moneda y Conversor -->
+                <div class="bg-white p-5 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 mr-4 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <div>
+                            <h4 class="font-bold">Moneda</h4>
+                            <p class="text-slate-600 text-sm">Corona Noruega (NOK). <span class="font-semibold">1€ ≈ 11.5 NOK</span></p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <input type="number" id="nok-input" class="w-full p-2 border border-slate-300 rounded-md" placeholder="NOK">
+                            <span class="font-bold text-slate-600">kr</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <input type="number" id="eur-input" class="w-full p-2 border border-slate-300 rounded-md" placeholder="EUR">
+                             <span class="font-bold text-slate-600">€</span>
+                        </div>
                     </div>
                 </div>
                 <!-- Info Svalbard (Desplegable) -->
@@ -155,6 +167,7 @@
     </div>
     
     <script>
+        // Script para los desplegables de información
         document.querySelectorAll('.info-accordion-button').forEach(button => {
             button.addEventListener('click', () => {
                 const accordionContent = button.nextElementSibling;
@@ -166,6 +179,29 @@
                     accordionContent.style.maxHeight = 0;
                 }
             });
+        });
+
+        // Script para el conversor de moneda
+        const nokInput = document.getElementById('nok-input');
+        const eurInput = document.getElementById('eur-input');
+        const nokToEurRate = 1 / 11.5; // Tasa de conversión NOK a EUR
+
+        nokInput.addEventListener('input', () => {
+            const nokValue = parseFloat(nokInput.value);
+            if (!isNaN(nokValue)) {
+                eurInput.value = (nokValue * nokToEurRate).toFixed(2);
+            } else {
+                eurInput.value = '';
+            }
+        });
+
+        eurInput.addEventListener('input', () => {
+            const eurValue = parseFloat(eurInput.value);
+            if (!isNaN(eurValue)) {
+                nokInput.value = (eurValue / nokToEurRate).toFixed(2);
+            } else {
+                nokInput.value = '';
+            }
         });
     </script>
 
