@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - Viaje a Svalbard 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .accordion-button svg {
+            transition: transform 0.3s ease;
+        }
+        .accordion-button.open svg {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+
+        <!-- Cabecera y botón de volver -->
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-4xl font-bold text-slate-700">Guía de Actividades</h1>
+            <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                &larr; Volver al Inicio
+            </a>
+        </header>
+
+        <!-- Acordeón de Actividades -->
+        <main id="activities-accordion" class="space-y-4">
+
+            <!-- Actividad 1: Paseo en Carro de Perros -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Paseo en Carro de Perros con Ruedas</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Disfruta de las impresionantes vistas costeras mientras tu guía lidera un equipo de potentes perros de trineo que tiran de un espacioso carro a lo largo de una ruta panorámica al oeste de Longyearbyen.</p>
+                        <p>Tu aventura comienza con la recogida en tu hotel, desde donde te dirigirás al punto de partida del tour, cerca del aeropuerto. ¡Allí te espera un equipo de 12 a 14 perros entusiastas! Si te apetece, puedes ayudar al guía a colocar los arneses a los perros y engancharlos con seguridad a la línea que tira del carro. En medio del alboroto inicial de ladridos y aullidos, se produce una transformación: en cuanto los perros comienzan a correr, su concentración se centra completamente en la tarea. Mientras tanto, tú puedes sumergirte en el impresionante paisaje costero que se extiende hacia Bjørndalen, también conocido como el Valle del Oso.</p>
+                        <p>¡Mantente atento a la abundante fauna de esta zona! Puede que tengas la suerte de avistar renos, zorros árticos, perdices nivales, focas e incluso morsas o ballenas. Durante los meses de verano, grandes grupos de ballenas beluga suelen visitar el fiordo. La avifauna también es muy rica, y es frecuente ver alcas pequeñas, charranes árticos y págalos.</p>
+                        <p>A medida que nos alejamos del pueblo, si el clima lo permite, la vista panorámica sobre el Isfjorden es sencillamente sobrecogedora. Admira los imponentes glaciares al otro lado del fiordo, que ofrecen una perspectiva impresionante sobre nuestra pequeñez frente a la vastedad del paisaje de Svalbard. Tras aproximadamente una hora y media de emocionante paseo en trineo tirado por perros, nos dirigiremos al criadero de Green Dog en Adventdalen. Allí podrás relajarte con una bebida caliente en una acogedora cabaña de madera y disfrutar de un rato con la adorable nueva camada de cachorros.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Perros polares tiran de carros ligeros con ruedas, permitiendo disfrutar de las vistas y observar animales y aves en el Valle de Advent. Es una oportunidad para conducir un trineo de perros sin nieve. Se proporciona un traje de exposición, botas y manoplas, así como una introducción. Un guía conduce el primer trineo (con espacio para un invitado), y los demás siguen en carros pequeños para 2-3 personas. La ruta sigue hacia la antigua estación de investigación de auroras boreales, con buenas posibilidades de ver renos, zorros y bandadas de aves migratorias. Se harán varias paradas para dar de beber a los perros. El recorrido pasa por Endalen, la estación de giro del teleférico y la antigua Mina Gruve 5. Ofrece colores vibrantes de la vegetación en contraste con las montañas y un aire ártico refrescante.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Punto de Encuentro:</strong> Frente a la entrada principal del hotel (recogida).</li>
+                            <li><strong>Duración:</strong> Aproximadamente 4 horas.</li>
+                            <li><strong>Dificultad:</strong> Condición física media.</li>
+                            <li><strong>Incluye:</strong> Transporte desde/hacia el alojamiento, ropa y botas, líder de la expedición con equipo de seguridad necesario.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 2: Safari de Morsas -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Safari de Morsas a Borebukta</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Durante los meses de verano y otoño, es común encontrar colonias de morsas descansando en playas e islotes alrededor de Svalbard. ¡Únete a nosotros en una excursión en barco para buscar a estas magníficas criaturas! Nuestra travesía se realiza a bordo de una lancha rápida híbrida-eléctrica, silenciosa y cerrada.</p>
+                        <p>Tu guía te recogerá en tu hotel y te llevará al puerto de Longyearbyen. Allí embarcarás en la lancha híbrida-eléctrica Kvitbjørn. Con una eslora de 14,9 metros, esta embarcación de diseño moderno ofrece asientos cómodos y capacidad para hasta 12 pasajeros.</p>
+                        <p>Nuestra aventura comienza cruzando el majestuoso Isfjorden (el “Fiordo del Hielo”). Tras aproximadamente una hora, llegaremos a la tranquila bahía de Borebukta. Conocida por su serenidad y aguas calmadas, Borebukta es un lugar habitual de descanso para colonias de morsas. En esta bahía utilizaremos el motor eléctrico para una navegación silenciosa, lo que nos permitirá observar la fauna sin perturbarla.</p>
+                        <p>Las morsas pueden verse todo el año en Svalbard. Aunque a menudo descansan sobre bloques de hielo, durante el verano y el otoño también frecuentan playas e islotes en grupos. Estas colonias suelen reunirse en lugares concretos donde tienen acceso cómodo tanto a alimento como a zonas de descanso. Las morsas son animales muy sociales, que suelen aparecer en grupos grandes. Tras alimentarse en el mar, se arrastran hasta la tierra o el hielo para descansar junto a su manada, muchas veces tumbadas unas sobre otras.</p>
+                        <p>Durante toda la excursión permaneceremos en el barco, pero pasaremos mucho tiempo en la cubierta trasera al aire libre, lo que te permitirá vivir una experiencia cercana con la naturaleza. Después de disfrutar de bebidas calientes y bollos recién horneados, pondremos rumbo de regreso a Longyearbyen.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Un viaje a la bahía de Borebukta para observar morsas, cuya población se ha recuperado significativamente desde que fueron protegidas en 1952. El tour comienza cruzando el majestuoso Fiordo de Hielo con el barco «Kvitbjørn», llegando a Borebukta en aproximadamente una hora, donde el mar suele estar tranquilo. Las morsas se ven durante todo el año, a menudo en témpanos de hielo o en colonias en playas e islotes durante el verano/otoño. Son animales muy sociales y se agrupan para descansar. No se garantiza la observación, pero las posibilidades son buenas.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Duración:</strong> 4 horas.</li>
+                            <li><strong>Dificultad:</strong> 2 - Adecuado para la mayoría.</li>
+                            <li><strong>Edad Mínima:</strong> 8 años.</li>
+                            <li><strong>Mínimo de Participantes:</strong> 4 personas.</li>
+                            <li><strong>Incluye:</strong> Transporte desde/hacia el alojamiento, conductor del barco y guía con equipo de seguridad, bebidas calientes y bollos frescos (como de canela).</li>
+                            <li><strong>Qué Llevar:</strong> Ropa de abrigo, gorro y mitones, ya que se pasará tiempo en cubierta.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actividad 3: Excursión Costera del Capitán -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Excursión Costera Favorita del Capitán</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Bienvenido a una experiencia de navegación inigualable a bordo del MS Bard. Este viaje te ofrece una visión única de los impresionantes paisajes costeros de Svalbard. Nuestro capitán traza la ruta en función del viento y las condiciones meteorológicas, lo que garantiza que cada salida sea una aventura diferente.</p>
+                        <p>A medida que nos acercamos al puerto de Longyearbyen, la expectación crece. No hay una ruta ni un destino fijos para esta excursión: navegamos allí donde las condiciones sean más favorables, guiados por el clima, el estado del mar y los últimos avistamientos de fauna. En esencia, buscamos aprovechar lo mejor que el día tenga para ofrecernos.</p>
+                        <p>Cada mes en Svalbard tiene su propio encanto. Un viaje bajo el sol de medianoche en mayo es muy distinto de uno al caer la noche polar en octubre. A comienzos de temporada, las montañas están cubiertas de nieve y los fiordos aún pueden presentar bloques de hielo marino. A partir de junio, el paisaje se transforma y estalla en tonos verdes y amarillos. La fauna es parte del espectáculo: desde renos y focas hasta ballenas, y con mucha suerte, incluso osos polares. Durante la travesía también pasaremos por lugares de interés cultural e histórico, creando una experiencia sensorial inolvidable guiada por nuestro personal experto.</p>
+                        <p>Embarcarás en esta travesía a bordo del catamarán híbrido-eléctrico MS Bard, diseñado para reducir el ruido y las vibraciones, lo que permite una mayor cercanía a la naturaleza sin molestar a la fauna local.</p>
+                        <p>El MS Bard presenta un diseño noruego contemporáneo con interiores amplios. Varias cubiertas exteriores te permitirán disfrutar del paisaje al aire libre, mientras que sus enormes ventanales panorámicos ofrecen vistas impresionantes desde el interior. Sus cómodas zonas de descanso, tanto dentro como fuera, proporcionan espacio más que suficiente para relajarte sin agobios. En el interior encontrarás una cafetería y un bar con una variada selección de bebidas y tentempiés.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Esta excursión no tiene una ruta o destino fijo; se navega según las condiciones meteorológicas, el estado del mar y las observaciones recientes de vida silvestre para maximizar la experiencia del día. Cada mes en Svalbard es único, y el paisaje cambia de mayo a octubre. Es posible ver renos, focas, ballenas y, con suerte, osos polares. Se pasarán por monumentos culturales y sitios históricos. Se viaja en el catamarán híbrido eléctrico MS Bard, diseñado para minimizar el ruido y la vibración, acercando a la naturaleza y perturbando menos la vida silvestre. El barco tiene un diseño noruego contemporáneo con amplias cubiertas exteriores y grandes ventanas panorámicas. Dispone de cómodos salones interiores y exteriores, un café y un bar con selección de aperitivos y bebidas.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Información Práctica:</strong> Recogida en la entrada del hotel a la hora programada (el autobús puede retrasarse unos minutos).</li>
+                            <li><strong>Dificultad:</strong> 1 - Adecuado para todos.</li>
+                            <li><strong>Recomendaciones:</strong> Vestirse con ropa de abrigo, chaqueta cortavientos, gorro cálido y mitones. Aunque se puede estar en el salón cálido, es agradable pasar tiempo en las cubiertas exteriores.</li>
+                            <li><strong>Idioma:</strong> Se requiere hablar y entender inglés o uno de los idiomas escandinavos para comprender las instrucciones del guía.</li>
+                            <li><strong>Condiciones:</strong> Sujeto a condiciones meteorológicas (viento y olas). La excursión puede ser cancelada o reubicada si hay menos de 8 participantes.</li>
+                            <li><strong>MS Bard:</strong> Catamarán innovador construido para minimizar el impacto ambiental. Funciona silenciosamente con propulsión eléctrica cerca de glaciares, vida silvestre o asentamientos; utiliza una solución híbrida (motor eléctrico y diésel) para mayores velocidades y reducir el consumo de diésel.</li>
+                            <li><strong>Incluye:</strong> Traslado desde/hacia el puerto de Longyearbyen, tour en barco con guías y equipo de seguridad necesario.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 4: Tour de Fotografía -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Tour de Fotografía de Vida Silvestre</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Únete a nosotros en un viaje para capturar la impactante belleza de Longyearbyen y sus alrededores, con un enfoque especial en fotografiar la increíble fauna y avifauna de Svalbard. Este tour es ideal tanto para fotógrafos como para amantes de la naturaleza, con especial atención a la fotografía de zorros árticos, renos de Svalbard y otros animales locales.</p>
+                        <p>Comenzamos recogiéndote en tu alojamiento y nos dirigimos a lugares seleccionados especialmente por sus frecuentes avistamientos de fauna. La duración del tour varía en función del clima y de la actividad animal, y es perfecto para todas las edades, incluidas las familias. Nos desplazamos principalmente en coche, haciendo caminatas cortas y fáciles —de entre 500 metros y unos pocos kilómetros— para alcanzar los mejores puntos de observación.</p>
+                        <p>De mayo a septiembre, el enfoque se centra en la abundante avifauna de Svalbard, con paradas en ubicaciones clave para aprovechar al máximo las oportunidades fotográficas. En los meses más fríos, de octubre a abril, el objetivo pasa a ser el paisaje ártico, aunque es habitual ver renos, perdices nivales y zorros árticos. El clima invernal puede modificar la ruta prevista, pero la aventura siempre resulta inolvidable.</p>
+                        <p>Durante la temporada de auroras boreales, las noches despejadas ofrecen la posibilidad de fotografiar la aurora, cielos estrellados y paisajes nocturnos. Nuestros guías están preparados para ayudarte a configurar tu equipo para fotografía nocturna, y conducirán hasta los mejores lugares para capturar las luces del norte. Si avistamos animales con poca luz, utilizamos iluminación LED para ayudarte a conseguir buenas imágenes sin molestarlos.</p>
+                        <p>Este tour es una oportunidad única para sumergirte en la naturaleza salvaje de Svalbard y llevarte a casa fotos espectaculares de los paisajes y la fauna extraordinaria de Longyearbyen.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Este tour diurno se centra en la vida silvestre local en y alrededor de Longyearbyen, incluyendo el zorro ártico, el lagópodo nival de Svalbard, el reno de Svalbard y el alca pequeña. El objetivo es encontrar buenos lugares para tomar fotos. El enfoque específico puede variar según la temporada y las especies presentes. El viaje de 4 a 5 horas se realiza en coche entre diferentes ubicaciones cercanas a Longyearbyen, con paradas y caminatas de unos cientos de metros a dos o tres kilómetros, buscando las mejores condiciones de iluminación y experiencias. El guía es también un fotógrafo de naturaleza experimentado.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                             <li><strong>Punto de Recogida:</strong> Entrada del hotel.</li>
+                             <li><strong>Incluye:</strong> Guía, transporte, bebidas calientes y galletas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 5: Escalada a Sarkofagen -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Escalada a Sarkofagen</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Emprende una aventura inolvidable mientras ascendemos a la cima del Sarkofagen, una de las montañas más emblemáticas de Longyearbyen, que ofrece vistas inigualables del pueblo y de la naturaleza salvaje que lo rodea. Tu viaje comienza con la recogida en tu hotel, seguida de un corto trayecto en coche hasta el punto de inicio de la expedición: Nybyen, en el extremo sur de Longyearbyen. Desde aquí, la belleza indómita de Svalbard te espera a solo unos pasos.</p>
+                        <p>Nuestra ruta atraviesa el valle, cruza el Longyearbreen (el “Glaciar Longyear”) y continúa hacia la imponente cima del Sarkofagen. A lo largo del camino, no hay senderos definidos: el terreno está formado por una morrena cambiante, con un paisaje abrupto que recuerda a la superficie lunar. En medio de este escenario de otro mundo, presta atención a los fósiles de hace 60 millones de años, expuestos por el lento retroceso del glaciar a lo largo de milenios.</p>
+                        <p>Aunque el terreno puede ser rocoso, empinado y desigual por momentos, tu guía marcará un ritmo constante para que todos puedan disfrutar de la majestuosidad del entorno natural. Al llegar al glaciar, no hay que preocuparse: el paso es estable y no requiere cuerdas ni equipamiento técnico.</p>
+                        <p>Durante la ascensión, mantén los ojos abiertos para avistar a las perdices nivales de Svalbard, una especie única adaptada al entorno ártico que no tiene depredadores naturales en la isla. Su presencia añade un toque mágico al recorrido, mostrando la vida salvaje que prospera en este entorno prístino.</p>
+                        <p>Una vez alcanzada la cima del Sarkofagen, contempla el impresionante panorama que se despliega ante ti, con vistas amplias sobre Longyearbyen a tus pies. Allí disfrutaremos de un delicioso almuerzo de expedición acompañado de bebidas calientes, aprovechando la calma del entorno antes de comenzar el descenso de regreso al pueblo, donde concluirá nuestra inolvidable aventura.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>La caminata comienza en Nybyen, el punto más alto de Longyearbyen, y se dirige a través del valle hacia el glaciar. Se cruza un glaciar estable sin necesidad de cuerdas. El guía lidera el camino y lleva armas por si se encuentran con osos polares, aunque las posibilidades son mínimas. El objetivo es disfrutar de las vistas. El paisaje de morrena es único, similar a un paisaje lunar, donde se pueden encontrar fósiles de 60 millones de años. Las montañas de Longyearbyen y los sedimentos de mares, ríos y pantanos antiguos se pueden leer como un libro de historia. El glaciar también mueve rocas y grava, exponiendo fósiles. Se busca no dejar rastros evidentes del paso, lo que significa no crear senderos. El terreno es empinado e irregular, pero el guía mantendrá un ritmo constante. Hay buena posibilidad de avistar Lagópodos de Svalbard, que son más grandes que los de la parte continental y no se asustan fácilmente al no tener depredadores naturales.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Punto de Encuentro:</strong> Frente a la entrada principal de tu hotel (recogida).</li>
+                            <li><strong>Duración:</strong> Aproximadamente 6 horas.</li>
+                            <li><strong>Dificultad:</strong> Requiere buena condición física; no apto para personas con movilidad reducida (terreno empinado, resbaladizo e irregular). Se requieren zapatos de senderismo; las polainas pueden ser una ventaja si hay nieve podrida. Se utilizarán raquetas de nieve si es necesario.</li>
+                            <li><strong>Incluye:</strong> Transporte desde/hacia hoteles/casas de huéspedes, almuerzo, bebidas calientes, líder de la expedición con equipo de seguridad necesario.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 6: Carro de Perros por el Mar -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Carro de Perros por el Mar</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Descripción</h3>
+                        <p>Disfruta del hermoso paisaje costero con perros de trineo a lo largo de "Vestpynten", una zona a las afueras de Longyearbyen. El tour comienza con un traslado a la costa, donde los perros esperan. Se uncirán de 12 a 14 perros al carro. El recorrido sigue la costa del mar Ártico hacia Bjørndalen. Se recomienda estar atento a la vida silvestre: es posible ver renos de Svalbard, zorros árticos, lagópodos locales, y con suerte, focas y posiblemente morsas o ballenas en el agua. Durante los períodos de anidación, abundan aves como gaviotas, alcas, charranes árticos y frailecillos. El tour se realiza por un camino de grava lejos del pueblo. Después de explorar la costa en el carro, se regresa al patio de los perros para devolver a los huskies a sus perreras. Allí se puede saludar a los cachorros husky y disfrutar de una taza de té o café en una cabaña.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Punto de Recogida:</strong> Entrada del hotel. Incluye transporte desde/hacia el alojamiento.</li>
+                            <li><strong>Duración:</strong> Aproximadamente 3 a 3.5 horas.</li>
+                            <li><strong>Recomendaciones:</strong> Usar ropa de abrigo, guantes y gorro para estar al aire libre.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 7: Longyearbyen en pocas palabras -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Longyearbyen en pocas palabras</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Embárcate en un viaje inolvidable por los paisajes agrestes de Longyearbyen y sus alrededores con nuestro exclusivo tour guiado en vehículo. Con salidas diarias desde tu hotel, esta excursión inmersiva te ofrece una exploración fascinante de la historia, la cultura y las maravillas naturales de la zona.</p>
+                        <p>A medida que avanzamos, nuestro guía experto te acompañará compartiendo comentarios interesantes y perspectivas únicas sobre la historia de Longyearbyen, desde sus inicios como asentamiento minero hasta su presente como una próspera comunidad ártica. A lo largo del recorrido, tendrás la oportunidad de descubrir rincones ocultos y lugares emblemáticos, incluidas las minas locales, áreas de investigación, el centro del pueblo y la famosa Bóveda Global de Semillas.</p>
+                        <p>Durante el tour haremos paradas estratégicas en miradores y puntos ideales para hacer fotos, permitiéndote capturar la impresionante belleza de la naturaleza salvaje de Svalbard. Mantén los ojos bien abiertos: la diversa fauna de la región puede sorprenderte en cualquier momento.</p>
+                        <p>Tanto si eres un apasionado de la historia, un amante de la naturaleza o simplemente buscas una experiencia diferente, nuestro tour en vehículo guiado promete ser una vivencia enriquecedora y memorable que te mostrará lo mejor de Longyearbyen y su entorno. No pierdas la oportunidad de sumergirte en las historias cautivadoras y los paisajes espectaculares de este paraíso ártico. Reserva hoy tu plaza y prepárate para un viaje que no olvidarás.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Un tour guiado en taxi por Longyearbyen que ofrece conocimiento local, una visión general de las atracciones y una introducción a la historia general de Svalbard. Es una forma ideal de comenzar la estancia. Se hará una parada obligatoria en el icónico cartel del oso polar antes de continuar hacia Adventdalen, pasando por las perreras de la ciudad y subiendo hasta la Mina 7 y el Observatorio de la Aurora Boreal. El tour continúa hacia la Mina 3, pasando por Hotellneset cerca del aeropuerto, con una breve parada en la Bóveda Global de Semillas (Seed Vault). Se incluye un guía local por el centro de Longyearbyen, y se hará una parada adicional si se encuentran renos.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Operador:</strong> Svalbard Buss og Taxi.</li>
+                            <li><strong>Dificultad:</strong> 1 - Adecuado para todos.</li>
+                            <li><strong>Duración:</strong> 2 horas.</li>
+                            <li><strong>Edad Mínima:</strong> 0 años.</li>
+                            <li><strong>Idiomas:</strong> Noruego o inglés.</li>
+                            <li><strong>Vehículo:</strong> El tamaño del vehículo depende del número de participantes.</li>
+                            <li><strong>Incluye:</strong> Guía local con amplio conocimiento.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actividad 8: Crucero de Vida Silvestre y Glaciares -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Crucero de Vida Silvestre y Glaciares</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Te presentamos una forma sostenible de explorar los fiordos de Svalbard: ¡únete a nosotros a bordo del catamarán híbrido-eléctrico MS Bard! Nuestra excursión te llevará por paisajes impresionantes hasta el Billefjorden y el frente glaciar del Nordenskiöldbreen.</p>
+                        <p>Un autobús pasará a recogerte y te llevará al puerto, donde te estará esperando el MS Bard. Las condiciones en Svalbard varían mucho a lo largo del año, ofreciendo experiencias únicas en la magnífica naturaleza ártica, ya sea bajo el sol de medianoche en mayo o con la llegada de la noche polar en octubre.</p>
+                        <p>Viajar a bordo del catamarán híbrido-eléctrico MS Bard garantiza un mínimo de ruido y vibración, lo que permite una conexión más cercana con la naturaleza sin molestar a la fauna salvaje.</p>
+                        <p>A comienzos de temporada, partes del Billefjorden pueden estar aún cubiertas de hielo. Utilizando únicamente el motor eléctrico, seguiremos silenciosamente el borde del hielo, lo que brinda excelentes oportunidades para observar animales. A lo largo del recorrido, contemplaremos el impresionante frente glaciar del Nordenskiöldbreen. También podremos ver a lo lejos la ciudad fantasma de Pyramiden y pasaremos junto a Skansbukta, una bahía cargada de historia fascinante.</p>
+                        <p>El MS Bard cuenta con un diseño noruego contemporáneo que realza la experiencia de tranquilidad a bordo. Podrás recorrer sus múltiples cubiertas exteriores o disfrutar de las vistas desde el interior a través de sus amplios ventanales panorámicos. Las zonas de descanso son cómodas tanto en el interior como al aire libre, donde también encontrarás una cafetería y un bar con una variada selección de bebidas y tentempiés. Durante la excursión, disfrutarás además de una deliciosa sopa vegetariana de lentejas.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Esta excursión en el catamarán híbrido eléctrico MS Bard ofrece una alternativa sostenible para explorar los fiordos de Svalbard, minimizando el ruido y la vibración para acercarse a la naturaleza y molestar menos a la vida silvestre. El autobús te recogerá y te llevará al puerto. Las condiciones en Svalbard cambian durante el año, pero se garantizan experiencias únicas en la hermosa naturaleza. A principios de temporada, partes de Billefjorden pueden estar cubiertas de hielo; se usará el motor eléctrico para seguir silenciosamente el borde del hielo, ideal para observar la vida silvestre y disfrutar del frente del glaciar Nordenskiöldbreen. También se verá el pueblo fantasma de Pyramiden desde la distancia y se pasará por Skansbukta, una bahía con mucha historia. El barco cuenta con un diseño noruego contemporáneo, amplias cubiertas exteriores, grandes ventanas panorámicas y cómodos salones. En el interior hay un café y bar con snacks y bebidas. Se sirve una deliciosa sopa de lentejas vegetariana (vegana, sin gluten ni lactosa); se pueden solicitar alternativas para otras alergias por correo electrónico con antelación.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                             <li><strong>Información Práctica:</strong> El transporte al MS Bard comienza a la hora programada desde el hotel (el autobús puede retrasarse unos minutos).</li>
+                             <li><strong>Dificultad:</strong> 1 - Adecuado para todos.</li>
+                             <li><strong>Recomendaciones:</strong> Vestirse con ropa de abrigo, chaqueta cortavientos, gorro cálido y mitones.</li>
+                             <li><strong>Idioma:</strong> Se requiere hablar y entender inglés o uno de los idiomas escandinavos para comprender las instrucciones del guía.</li>
+                             <li><strong>Condiciones:</strong> Sujeto a condiciones meteorológicas (viento y olas). La excursión puede ser cancelada o reubicada si hay menos de 8 participantes.</li>
+                             <li><strong>MS Bard:</strong> Catamarán innovador que busca la menor huella en la naturaleza ártica. Usa propulsión eléctrica silenciosa cerca de elementos naturales y una solución híbrida para mayor velocidad y menor consumo de diésel.</li>
+                             <li><strong>Incluye:</strong> Traslado desde/hacia el puerto de Longyearbyen, tour en barco con guías y equipo de seguridad, una pequeña comida (sopa de lentejas vegana con pan y mantequilla).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 9: Safari en ATV -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Safari en Vehículo Todoterreno (ATV)</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Prepárate para una aventura emocionante mientras nos embarcamos en un trepidante tour en quad (ATV) a través de los paisajes fascinantes del verano polar en Svalbard. Esta excursión combina de forma única belleza natural, riqueza histórica y encuentros con la fauna local, prometiendo una experiencia inolvidable.</p>
+                        <p>Tu viaje comienza con la recogida en tu hotel, seguida de un traslado a nuestro centro de expediciones. Allí te proporcionaremos todo el equipo necesario: mono térmico, botas, casco y gafas, y recibirás una completa introducción sobre el manejo del ATV. Una vez listos, ¡es hora de salir a la aventura!</p>
+                        <p>Nuestra ruta nos lleva al corazón de Adventdalen (el Valle Advent) en dirección a la majestuosa montaña Breinosa y la histórica Mina 7. Durante el trayecto, haremos varias paradas en monumentos culturales que reflejan el rico legado minero de Svalbard, conociendo de cerca más de un siglo de actividad industrial. Mantén la vista atenta: es frecuente avistar renos de Svalbard pastando en el suelo rico en nutrientes de las zonas pantanosas cercanas. También podrías tener la suerte de ver al esquivo zorro ártico, que merodea la zona en busca de alimento entre los nidos de aves y sus huevos.</p>
+                        <p>Aunque el pantano pueda parecer árido a simple vista, está lleno de pequeñas plantas coloridas que contrastan sorprendentemente con el áspero paisaje ártico. En el mirador de la cima de Breinosa, haremos una pausa para contemplar las espectaculares vistas sobre el Isfjorden y dejarnos envolver por la belleza natural del entorno.</p>
+                        <p>De regreso al pueblo, haremos una parada muy especial en Svalbard Husky, donde tendrás la oportunidad de conocer e interactuar con un grupo de vivaces perros de trineo. Disfruta del momento acariciando a estos enérgicos y sociables compañeros, y crea recuerdos imborrables que te acompañarán mucho después de que termine nuestra aventura.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Conduce ATVs Can-Am Outlander por el paisaje veraniego de Svalbard, que es corto y lleno de vida animal y de aves, siendo común ver ciervos y zorros. De mayo a finales de agosto hay luz diurna las 24 horas. La ruta pasa por Endalen (debajo de Gruve 5, con vistas a Gruve 2), continúa por Adventdalen y sube a Gruve 7-fjellet. En la cima de la montaña está el Observatorio Kjell Henriksen para la investigación de la aurora boreal, donde se hace una parada para disfrutar de la vista. De regreso, se visita la estación de tramperos de Basecamps en Bolterdalen, donde se sirve café y se pueden conocer a los perros.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Punto de Encuentro:</strong> Frente a la entrada principal del hotel (recogida).</li>
+                            <li><strong>Duración:</strong> Aproximadamente 3.5 horas.</li>
+                            <li><strong>Dificultad:</strong> 2 - Adecuado para la mayoría.</li>
+                            <li><strong>Edad Mínima:</strong> 8 años.</li>
+                            <li><strong>Incluye:</strong> Transporte desde/hacia hoteles/casas de huéspedes, ATV y combustible, traje de motonieve, botas, guantes, casco, gafas y pasamontañas, bebidas calientes y galletas, guía con ATV y equipo de seguridad.</li>
+                            <li><strong>Vestimenta Personal:</strong> Se recomienda ropa cálida y cortavientos, mitones de lana debajo de los guantes de scooter. Capa interior: lana. Capa intermedia: suéter y pantalones de forro polar o lana.</li>
+                            <li><strong>Importante:</strong> Se requiere una licencia de conducir de coche o motocicleta para conducir un ATV. El participante es responsable de verificar si su licencia es válida en Svalbard y Jan Mayen (debe ser válida en el país de origen y de acuerdo con la "Convención de Viena sobre el Tráfico por Carretera de 1968"). El guía verificará la licencia de cada pasajero y denegará la participación si es necesario, sin reembolsos por licencias no válidas. La licencia de conducir debe llevarse durante el viaje.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 10: Noche en Camp Barentz -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Noche en la Naturaleza en Camp Barentz</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>Esta actividad nocturna es el complemento perfecto para tu aventura en Svalbard. Sal de Longyearbyen para disfrutar de una deliciosa cena y una charla informal en una cabaña encantadora y auténtica. El protagonista de la velada: el oso polar. ¿Qué tanto sabes sobre el majestuoso rey del Ártico?</p>
+                        <p>Un autobús pasará a recogerte en tu hotel. Al dejar atrás el pueblo y adentrarnos en el amplio valle de Adventdalen, la emoción empieza a crecer. Tras un breve trayecto de 10 a 15 minutos, llegamos a Camp Barentz, un pequeño conjunto de cabañas, que incluye una réplica del refugio donde Willem Barentz —descubridor de Svalbard— pasó el invierno de 1596 en Nueva Zembla.</p>
+                        <p>Nuestro anfitrión, que lleva consigo protección contra osos debido a lo aislado del lugar, nos recibe con calidez. En el interior, alrededor de un acogedor fuego, disfrutamos de bebidas, un abundante bidos casero de reno, café y postre.</p>
+                        <p>Después de la cena, llega el momento de adentrarse en el mundo del rey del Ártico. Reunidos en torno al fuego, el anfitrión comparte información fascinante y fotografías sobre los osos polares, los emblemáticos habitantes de Svalbard. Sin duda aprenderás datos curiosos y escucharás anécdotas personales que enriquecerán tu comprensión de esta criatura imponente.</p>
+                        <p>Tras la charla, habrá oportunidad de hacer fotos del impresionante paisaje. En este rincón apartado es frecuente ver renos de Svalbard, y con algo de suerte, también perdices nivales o zorros árticos. Finalmente, el autobús nos recogerá para llevarnos de regreso a Longyearbyen.</p>
+                        <h3 class="font-bold text-lg mt-4">Descripción</h3>
+                        <p>Una experiencia especial en la naturaleza a 78 grados norte. Al salir de la ciudad y adentrarse en el Valle de Advent, la anticipación aumenta mientras las montañas se elevan bajo el sol de medianoche o el resplandor de la noche corta. Camp Barentz está al pie de la montaña Breinosa, debajo de la Mina 7. Una de sus construcciones, Barentz Hus, es una réplica de la cabaña donde Willem Barentz, el descubridor de Svalbard, invernó en 1596 en Nueva Zembla. En el campamento se puede disfrutar del paisaje y a menudo ver renos de Svalbard, y con suerte, lagópodos y zorros. Los anfitriones están atentos por si aparece un oso polar. Al llegar, se recibe a los huéspedes y se sirven bebidas, un delicioso bidos de reno casero, café de fogata y postre, ofreciendo una auténtica comida de Svalbard. Después de la cena, se aprende sobre el oso polar ("Rey del Ártico"), con el anfitrión compartiendo información y fotos alrededor del fuego, incluyendo algunas historias. Habrá tiempo para fotos del paisaje antes de regresar a la civilización.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Información Práctica:</strong> Es una actividad interior, pero se recomienda ropa cómoda y cálida para exteriores, y zapatos cálidos (el suelo puede estar frío). La ropa puede oler a humo después.</li>
+                            <li><strong>Punto de Encuentro:</strong> Frente a la entrada de tu hotel (recogida).</li>
+                            <li><strong>Duración:</strong> Aproximadamente 3 horas.</li>
+                            <li><strong>Dificultad:</strong> 2 - Adecuado para la mayoría. No accesible para sillas de ruedas.</li>
+                            <li><strong>Incluye:</strong> Transporte, cena y pastel casero, bebidas (cerveza, vino, agua mineral), café, y presentación con guía y fotos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 11: Búsqueda de Fósiles -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Búsqueda de Fósiles en Longyearbreen</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Descripción</h3>
+                        <p>Los participantes pueden encontrar fósiles de plantas y animales de 40 a 60 millones de años en las montañas circundantes. La caminata comienza en Nybyen, adentrándose rápidamente en la naturaleza. No hay un camino definido; se avanza hacia el glaciar sobre un área de morrena que cambia cada año. El terreno es pedregoso e irregular, pero el ritmo es fácil para permitir la búsqueda de fósiles. Durante la caminata se hará una parada para disfrutar de una bebida caliente y una hermosa vista del paisaje glaciar y del pueblo. Es un tour a pie que requiere poder caminar aproximadamente 2 km por terreno variado.</p>
+                        <h3 class="font-bold text-lg mt-4">Detalles Prácticos</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Requisitos:</strong> Ropa y zapatos cálidos.</li>
+                            <li><strong>Incluye:</strong> Transporte desde/hacia Sverdrupbyen, guía experimentado con equipo de seguridad, bebidas calientes y galletas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actividad 12: Crucero por el fiordo -->
+            <div class="accordion-item bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 flex justify-between items-center font-bold text-xl text-slate-800 hover:bg-slate-50">
+                    <span>Crucero por el fiordo (Glacier Safari)</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-5 border-t border-slate-200 text-slate-700 space-y-4">
+                        <h3 class="font-bold text-lg">Información</h3>
+                        <p>A lo largo del trayecto, es posible que veamos aves, focas y el lugar donde comenzó la historia minera de Svalbard en Bohemanflya. Según las condiciones meteorológicas, navegaremos hacia la costa norte del fiordo para acercarnos a frentes glaciares como los de los glaciares Nansen, Bore, Wahlenberg o Svea, con la intención de aproximarnos a uno de ellos.</p>
+                        <p>Se trata de una oportunidad única de presenciar cómo enormes bloques de hielo se desprenden del frente de un glaciar. Con muchas posibilidades de observar fauna ártica, mantén los ojos bien abiertos: podrías ver ballenas, focas y una gran variedad de aves. Y con un poco de suerte, incluso podríamos avistar un oso polar merodeando por estas zonas glaciares, o una enorme morsa descansando en la costa.</p>
+                        <p>Nuestro guía y narrador compartirá contigo historias sobre Longyearbyen, los glaciares, la fauna del Ártico y, quizá, algún que otro cuento polar.</p>
+                        <p>Durante el recorrido se servirá una comida caliente, en un entorno tan gélido como espectacular. Si el clima y las condiciones del hielo lo permiten, desaceleraremos en algunos puntos seleccionados para disfrutar del paisaje y capturar momentos especiales que merezcan un lugar en tu diario de viaje.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+                button.classList.toggle('open');
+
+                if (button.classList.contains('open')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
