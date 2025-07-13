@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo - Viaje a Svalbard 2025</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Leaflet.js para el mapa interactivo -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        /* Es crucial definir una altura para el contenedor del mapa */
+        #map { 
+            height: 70vh; 
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+        }
+        .leaflet-popup-content {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+        .leaflet-popup-content h4 {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
+
+        <!-- Cabecera y botón de volver -->
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold text-slate-700">Mapa Interactivo</h1>
+            <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                &larr; Volver al Inicio
+            </a>
+        </header>
+
+        <!-- Contenedor del mapa -->
+        <div id="map"></div>
+
+    </div>
+
+    <script>
+        // 1. Inicializar el mapa, centrado en Longyearbyen
+        const map = L.map('map').setView([78.2232, 15.6267], 12);
+
+        // 2. Añadir la capa de teselas (el mapa base) de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // 3. Crear iconos personalizados para cada tipo de lugar
+        const hotelIcon = L.icon({
+            iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%231d4ed8&icon=hotel&iconType=awesome&scaleFactor=2&apiKey=YOUR_API_KEY',
+            iconSize: [38, 55], iconAnchor: [19, 55], popupAnchor: [0, -55]
+        });
+
+        const activityIcon = L.icon({
+            iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%23059669&icon=hiking&iconType=awesome&scaleFactor=2&apiKey=YOUR_API_KEY',
+            iconSize: [38, 55], iconAnchor: [19, 55], popupAnchor: [0, -55]
+        });
+
+        const interestIcon = L.icon({
+            iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%23db2777&icon=camera&iconType=awesome&scaleFactor=2&apiKey=YOUR_API_KEY',
+            iconSize: [38, 55], iconAnchor: [19, 55], popupAnchor: [0, -55]
+        });
+
+        // 4. Definir los puntos de interés
+        const locations = {
+            hotel: [
+                { lat: 78.2215, lng: 15.6255, name: 'Radisson Blu Polar Hotel', desc: 'Nuestro alojamiento en Longyearbyen.' }
+            ],
+            activities: [
+                { lat: 78.200, lng: 15.800, name: 'Camp Barentz', desc: 'Lugar de la "Wilderness Evening".' },
+                { lat: 78.208, lng: 15.580, name: 'Nybyen', desc: 'Punto de partida de la caminata a Sarkofagen.' },
+                { lat: 78.67, lng: 16.0, name: 'Glaciar Nordenskiöld', desc: 'Destino del crucero por el glaciar.' },
+                { lat: 78.35, lng: 14.8, name: 'Borebukta', desc: 'Zona de avistamiento de morsas.' }
+            ],
+            interest: [
+                { lat: 78.2461, lng: 15.4656, name: 'Aeropuerto de Svalbard (LYR)', desc: 'Puerta de entrada al Ártico.' },
+                { lat: 78.2356, lng: 15.4915, name: 'Bóveda Global de Semillas', desc: 'El "Arca de Noé" de las plantas.' },
+                { lat: 78.228, lng: 15.621, name: 'Museo de Svalbard', desc: 'Historia y naturaleza del archipiélago.' },
+                { lat: 78.220, lng: 15.628, name: 'Restaurante Kroa', desc: 'Uno de los restaurantes recomendados.' }
+            ]
+        };
+
+        // 5. Crear capas para cada tipo de marcador
+        const hotelLayer = L.layerGroup();
+        const activityLayer = L.layerGroup();
+        const interestLayer = L.layerGroup();
+
+        // 6. Añadir los marcadores a sus capas correspondientes
+        locations.hotel.forEach(loc => {
+            L.marker([loc.lat, loc.lng], {icon: hotelIcon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(hotelLayer);
+        });
+
+        locations.activities.forEach(loc => {
+            L.marker([loc.lat, loc.lng], {icon: activityIcon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(activityLayer);
+        });
+
+        locations.interest.forEach(loc => {
+            L.marker([loc.lat, loc.lng], {icon: interestIcon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(interestLayer);
+        });
+
+        // 7. Añadir las capas al mapa por defecto
+        hotelLayer.addTo(map);
+        activityLayer.addTo(map);
+        interestLayer.addTo(map);
+
+        // 8. Crear el control de capas
+        const overlayMaps = {
+            "🏨 Alojamiento": hotelLayer,
+            "⛰️ Actividades": activityLayer,
+            "📸 Puntos de Interés": interestLayer
+        };
+
+        L.control.layers(null, overlayMaps).addTo(map);
+
+    </script>
+
+</body>
+</html>
