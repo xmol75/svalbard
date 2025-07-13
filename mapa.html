@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interactivo - Viaje a Svalbard 2025</title>
+    <title>Mapa Interactivo de Oslo - Viaje a Svalbard 2025</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Leaflet.js para el mapa interactivo -->
@@ -18,9 +18,8 @@
             font-family: 'Inter', sans-serif;
             background-color: #f7fafc;
         }
-        /* Es crucial definir una altura para el contenedor del mapa */
         #map { 
-            height: 70vh; 
+            height: 65vh; 
             border-radius: 1rem;
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
@@ -34,6 +33,14 @@
         .leaflet-popup-content h4 {
             font-weight: bold;
             margin-bottom: 5px;
+            color: #1e3a8a;
+        }
+        .emoji-icon {
+            font-size: 2rem;
+            text-align: center;
+            line-height: 1;
+            background: none;
+            border: none;
         }
     </style>
 </head>
@@ -44,93 +51,88 @@
 
         <!-- Cabecera y botón de volver -->
         <header class="flex justify-between items-center mb-10">
-            <h1 class="text-3xl font-bold text-slate-700">Mapa Interactivo</h1>
+            <h1 class="text-3xl font-bold text-slate-700">Mapa Interactivo: Oslo</h1>
             <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
                 &larr; Volver al Inicio
             </a>
         </header>
 
         <!-- Contenedor del mapa -->
-        <div id="map"></div>
+        <div id="map" class="map-container"></div>
 
+        <!-- Sección de información de transporte -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold text-slate-700 mb-4">Cómo ir del Aeropuerto (OSL) a los Hoteles</h2>
+            <p class="text-slate-600 mb-6">La forma más rápida y sencilla es en tren hasta la Estación Central de Oslo (Oslo S), que está a pocos minutos andando de ambos hoteles. Hay dos opciones principales:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tarjeta Flytoget -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-400">
+                    <h3 class="text-xl font-bold mb-2">Opción 1: Flytoget (Tren Express)</h3>
+                    <p class="text-sm text-slate-500 mb-4">La opción más rápida y cómoda.</p>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>Precio:</strong> ~ 240 NOK / 21 € por adulto</li>
+                        <li><strong>Tiempo:</strong> 19-22 minutos</li>
+                        <li><strong>Distancia:</strong> 50 km</li>
+                        <li><strong>Frecuencia:</strong> Cada 10-20 minutos</li>
+                    </ul>
+                </div>
+                <!-- Tarjeta Vy -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <h3 class="text-xl font-bold mb-2">Opción 2: Trenes Vy (Regional)</h3>
+                    <p class="text-sm text-slate-500 mb-4">La mejor relación calidad-precio.</p>
+                     <ul class="space-y-2 text-slate-700">
+                        <li><strong>Precio:</strong> ~ 120 NOK / 10.5 € por adulto</li>
+                        <li><strong>Tiempo:</strong> 23 minutos</li>
+                        <li><strong>Distancia:</strong> 50 km</li>
+                        <li><strong>Frecuencia:</strong> Muy alta, varias veces por hora</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // 1. Inicializar el mapa, centrado en Longyearbyen
-        const map = L.map('map').setView([78.2232, 15.6267], 12);
-
-        // 2. Añadir la capa de teselas (el mapa base) de OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-        // 3. Crear iconos personalizados para cada tipo de lugar
-        const hotelIcon = L.icon({
-            iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%231d4ed8&icon=hotel&iconType=awesome&scaleFactor=2&apiKey=YOUR_API_KEY',
-            iconSize: [38, 55], iconAnchor: [19, 55], popupAnchor: [0, -55]
+        // --- ICONOS PERSONALIZADOS ---
+        const createEmojiIcon = (emoji) => L.divIcon({
+            html: `<span class="emoji-icon">${emoji}</span>`,
+            className: 'dummy-class-to-avoid-default-styling',
+            iconSize: [30, 30],
+            iconAnchor: [15, 30],
+            popupAnchor: [0, -35]
         });
 
-        const activityIcon = L.icon({
-            iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%23059669&icon=hiking&iconType=awesome&scaleFactor=2&apiKey=YOUR_API_KEY',
-            iconSize: [38, 55], iconAnchor: [19, 55], popupAnchor: [0, -55]
-        });
+        const hotelIcon = createEmojiIcon('🏨');
+        const trainIcon = createEmojiIcon('🚆');
+        const landmarkIcon = createEmojiIcon('🏛️');
 
-        const interestIcon = L.icon({
-            iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%23db2777&icon=camera&iconType=awesome&scaleFactor=2&apiKey=YOUR_API_KEY',
-            iconSize: [38, 55], iconAnchor: [19, 55], popupAnchor: [0, -55]
-        });
-
-        // 4. Definir los puntos de interés
-        const locations = {
-            hotel: [
-                { lat: 78.2215, lng: 15.6255, name: 'Radisson Blu Polar Hotel', desc: 'Nuestro alojamiento en Longyearbyen.' }
+        // --- INICIALIZACIÓN DEL MAPA DE OSLO ---
+        const map = L.map('map').setView([59.913, 10.74], 14); // Vista centrada en Oslo
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(map);
+        
+        const osloLocations = {
+            transport: [
+                { lat: 59.9113, lng: 10.7520, name: 'Estación Central (Oslo S)', desc: 'Punto de llegada del tren del aeropuerto.', icon: trainIcon }
             ],
-            activities: [
-                { lat: 78.200, lng: 15.800, name: 'Camp Barentz', desc: 'Lugar de la "Wilderness Evening".' },
-                { lat: 78.208, lng: 15.580, name: 'Nybyen', desc: 'Punto de partida de la caminata a Sarkofagen.' },
-                { lat: 78.67, lng: 16.0, name: 'Glaciar Nordenskiöld', desc: 'Destino del crucero por el glaciar.' },
-                { lat: 78.35, lng: 14.8, name: 'Borebukta', desc: 'Zona de avistamiento de morsas.' }
+            hotels: [
+                { lat: 59.9118, lng: 10.7492, name: 'Comfort Hotel Karl Johan', desc: 'A 5 minutos andando desde la Estación Central.' },
+                { lat: 59.9115, lng: 10.7521, name: 'Scandic Oslo City', desc: 'A 2 minutos andando desde la Estación Central.' }
             ],
-            interest: [
-                { lat: 78.2461, lng: 15.4656, name: 'Aeropuerto de Svalbard (LYR)', desc: 'Puerta de entrada al Ártico.' },
-                { lat: 78.2356, lng: 15.4915, name: 'Bóveda Global de Semillas', desc: 'El "Arca de Noé" de las plantas.' },
-                { lat: 78.228, lng: 15.621, name: 'Museo de Svalbard', desc: 'Historia y naturaleza del archipiélago.' },
-                { lat: 78.220, lng: 15.628, name: 'Restaurante Kroa', desc: 'Uno de los restaurantes recomendados.' }
+            landmarks: [
+                { lat: 59.9075, lng: 10.7526, name: 'Ópera de Oslo' },
+                { lat: 59.9170, lng: 10.7273, name: 'Palacio Real' },
+                { lat: 59.9077, lng: 10.7377, name: 'Fortaleza de Akershus' },
+                { lat: 59.9061, lng: 10.7557, name: 'Museo Munch' }
             ]
         };
 
-        // 5. Crear capas para cada tipo de marcador
-        const hotelLayer = L.layerGroup();
-        const activityLayer = L.layerGroup();
-        const interestLayer = L.layerGroup();
-
-        // 6. Añadir los marcadores a sus capas correspondientes
-        locations.hotel.forEach(loc => {
-            L.marker([loc.lat, loc.lng], {icon: hotelIcon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(hotelLayer);
-        });
-
-        locations.activities.forEach(loc => {
-            L.marker([loc.lat, loc.lng], {icon: activityIcon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(activityLayer);
-        });
-
-        locations.interest.forEach(loc => {
-            L.marker([loc.lat, loc.lng], {icon: interestIcon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(interestLayer);
-        });
-
-        // 7. Añadir las capas al mapa por defecto
-        hotelLayer.addTo(map);
-        activityLayer.addTo(map);
-        interestLayer.addTo(map);
-
-        // 8. Crear el control de capas
-        const overlayMaps = {
-            "🏨 Alojamiento": hotelLayer,
-            "⛰️ Actividades": activityLayer,
-            "📸 Puntos de Interés": interestLayer
-        };
-
-        L.control.layers(null, overlayMaps).addTo(map);
+        const transportLayer = L.layerGroup(), hotelsLayer = L.layerGroup(), landmarksLayer = L.layerGroup();
+        
+        osloLocations.transport.forEach(loc => L.marker([loc.lat, loc.lng], {icon: loc.icon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(transportLayer));
+        osloLocations.hotels.forEach(loc => L.marker([loc.lat, loc.lng], {icon: hotelIcon}).bindPopup(`<h4>${loc.name}</h4>${loc.desc}`).addTo(hotelsLayer));
+        osloLocations.landmarks.forEach(loc => L.marker([loc.lat, loc.lng], {icon: landmarkIcon}).bindPopup(`<h4>${loc.name}</h4>`).addTo(landmarksLayer));
+        
+        L.control.layers(null, { "🚆 Estación de Tren": transportLayer, "🏨 Hoteles": hotelsLayer, "🏛️ Sitios Emblemáticos": landmarksLayer }, { collapsed: false }).addTo(map);
+        map.addLayer(transportLayer).addLayer(hotelsLayer).addLayer(landmarksLayer);
 
     </script>
 
