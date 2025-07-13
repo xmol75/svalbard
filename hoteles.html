@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteles - Viaje a Svalbard 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .hotel-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hotel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Cabecera y botón de volver -->
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold text-slate-700">Nuestros Alojamientos</h1>
+            <a href="index.html" class="bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                &larr; Volver al Inicio
+            </a>
+        </header>
+
+        <!-- Grid de Hoteles -->
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Hotel 1: Comfort Hotel Karl Johan -->
+            <div class="hotel-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <img src="https://placehold.co/600x400/3498db/ffffff?text=Comfort+Hotel" alt="Imagen del Comfort Hotel Karl Johan" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-1">Comfort Hotel Karl Johan</h3>
+                    <p class="text-slate-500 mb-4">Oslo</p>
+                    <div class="text-sm space-y-2 mb-4">
+                        <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg><span><strong>Entrada:</strong> 19/07/2025</span></div>
+                        <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16l-4-4m0 0l4-4m4 4h-14m5 4v1a3 3 0 003 3h6a3 3 0 003-3V7a3 3 0 00-3-3H8a3 3 0 00-3 3v1"></path></svg><span><strong>Salida:</strong> 20/07/2025</span></div>
+                    </div>
+                    <div class="text-sm text-slate-600 border-t pt-4 mt-2 space-y-1">
+                        <p>Ubicado en la calle principal de Oslo, Karl Johans Gate.</p>
+                        <p>A pocos pasos de la Estación Central de Oslo.</p>
+                        <p>Dispone de gimnasio y un bar en el patio trasero.</p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                        <a href="https://www.strawberryhotels.com/hotels/norway/oslo/comfort-hotel-karl-johan/" target="_blank" class="block w-full text-center bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                            Ver página web
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel 2: Radisson Blu Polar -->
+            <div class="hotel-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <img src="https://placehold.co/600x400/0b3954/ffffff?text=Radisson+Blu+Polar" alt="Imagen del Radisson Blu Polar Hotel" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-1">Radisson Blu Polar Hotel</h3>
+                    <p class="text-slate-500 mb-4">Longyearbyen, Svalbard</p>
+                    <div class="text-sm space-y-2 mb-4">
+                         <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg><span><strong>Entrada:</strong> 20/07/2025</span></div>
+                        <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16l-4-4m0 0l4-4m4 4h-14m5 4v1a3 3 0 003 3h6a3 3 0 003-3V7a3 3 0 00-3-3H8a3 3 0 00-3 3v1"></path></svg><span><strong>Salida:</strong> 26/07/2025</span></div>
+                    </div>
+                     <div class="text-sm text-slate-600 border-t pt-4 mt-2 space-y-1">
+                        <p>El hotel de servicio completo más septentrional del mundo.</p>
+                        <p>Cuenta con sauna y jacuzzis exteriores con vistas al fiordo.</p>
+                        <p>Lobby con chimenea y ambiente acogedor.</p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                        <a href="https://www.radissonhotels.com/en-us/hotels/radisson-blu-polar-spitsbergen" target="_blank" class="block w-full text-center bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                            Ver página web
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel 3: Scandic Oslo City -->
+            <div class="hotel-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <img src="https://placehold.co/600x400/c8102e/ffffff?text=Scandic+Hotel" alt="Imagen del Scandic Oslo City" class="w-full h-48 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-1">Scandic Oslo City</h3>
+                    <p class="text-slate-500 mb-4">Oslo</p>
+                    <div class="text-sm space-y-2 mb-4">
+                        <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg><span><strong>Entrada:</strong> 26/07/2025</span></div>
+                        <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16l-4-4m0 0l4-4m4 4h-14m5 4v1a3 3 0 003 3h6a3 3 0 003-3V7a3 3 0 00-3-3H8a3 3 0 00-3 3v1"></path></svg><span><strong>Salida:</strong> 27/07/2025</span></div>
+                    </div>
+                    <div class="text-sm text-slate-600 border-t pt-4 mt-2 space-y-1">
+                        <p>Situado a solo 100 metros de la Estación Central de Oslo.</p>
+                        <p>Perfecto para acceder al tren del aeropuerto (Flytoget).</p>
+                        <p>Ofrece acceso a gimnasio y un bar en el lobby.</p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                        <a href="https://www.scandichotels.com/hotels/norway/oslo/scandic-oslo-city" target="_blank" class="block w-full text-center bg-sky-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">
+                            Ver página web
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sección de Información General -->
+        <section class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-slate-700">Información General y Normas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Columna Izquierda: Habitaciones y Servicios -->
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Distribución de Habitaciones</h4>
+                        <ul class="list-disc list-inside text-slate-600 space-y-1">
+                            <li><strong>6 Habitaciones dobles</strong></li>
+                            <li><strong>1 Habitación triple:</strong> María T, María B y Andreu</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Servicios Incluidos</h4>
+                        <p class="text-slate-600">Desayuno buffet completo en todos los alojamientos.</p>
+                    </div>
+                </div>
+                <!-- Columna Derecha: Normas en Longyearbyen -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">Normas Específicas en Longyearbyen</h4>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-sky-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Las habitaciones no estarán listas antes de las <strong>15:00h</strong> del día de llegada, y la salida es hasta las <strong>11:00h</strong> del día de partida.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-sky-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline></svg><span>En la mayoría de los hoteles y restaurantes se deben quitar los zapatos al entrar (hay zapatillas disponibles). <strong>Excepción:</strong> Barentz Gastropub.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 mr-3 text-sky-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>El hotel Radisson Blu Polar incluye <strong>internet inalámbrico</strong>.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Restaurantes -->
+        <section class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-slate-700">Restaurantes en el Hotel de Longyearbyen</h2>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-semibold text-lg">Restaurant Nansen</h4>
+                    <p class="text-slate-600">Ofrece un delicioso menú a la carta con vistas panorámicas a la montaña Hiorthfjellet. Dispone de una gran terraza para disfrutar del sol si el clima lo permite.</p>
+                </div>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold text-lg">Barentz Gastropub</h4>
+                    <p class="text-slate-600">Sirve almuerzos sabrosos y cenas informales, popular entre los locales.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
